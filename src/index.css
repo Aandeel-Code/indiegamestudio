@@ -55,8 +55,25 @@ button:focus-visible {
 }
 
 #root {
+  position: relative;
   width: 100%;
   min-height: 100vh;
+  isolation: isolate;
+}
+
+#root::before {
+  content: '';
+  position: fixed;
+  inset: -20% 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.26;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(129, 72, 255, 0.16), transparent 32%),
+    radial-gradient(circle at 78% 28%, rgba(24, 214, 194, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(129, 72, 255, 0.07), rgba(24, 214, 194, 0.075), rgba(129, 72, 255, 0.06));
+  animation: siteWashDrift 42s linear infinite;
+  transform: translate3d(0, 0, 0);
 }
 
 h1,
@@ -85,4 +102,18 @@ h3 {
 
 p {
   margin: 0;
+}
+
+@keyframes siteWashDrift {
+  0% {
+    transform: translate3d(0, -3%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 3%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -3%, 0);
+  }
 }

@@ -98,6 +98,25 @@
   z-index: -1;
 }
 
+.hero-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  height: 240px;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 18, 24, 0) 0%,
+    rgba(7, 18, 24, 0.3) 38%,
+    rgba(7, 18, 24, 0.72) 72%,
+    var(--bg) 100%
+  );
+  filter: blur(28px);
+  z-index: -1;
+  pointer-events: none;
+}
+
 .hero-copy {
   position: relative;
   z-index: 2;
@@ -176,6 +195,7 @@
 }
 
 .hero-background {
+  --hero-parallax-y: 0px;
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -188,7 +208,12 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(7, 18, 24, 0.08) 0%, rgba(7, 18, 24, 0.58) 100%);
+    linear-gradient(
+      180deg,
+      rgba(7, 18, 24, 0.08) 0%,
+      rgba(7, 18, 24, 0.36) 58%,
+      rgba(7, 18, 24, 0.82) 100%
+    );
 }
 
 .hero-background img {
@@ -196,8 +221,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.03);
+  transform: translate3d(0, var(--hero-parallax-y), 0) scale(1.18);
   filter: blur(4px) saturate(0.95) brightness(0.72);
+  will-change: transform;
 }
 
 .hero-float {
