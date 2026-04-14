@@ -374,7 +374,7 @@
 
 .site-footer {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   gap: 32px 24px;
   align-items: center;
   width: 100%;
@@ -385,23 +385,6 @@
 
 .footer-logo img {
   height: 76px;
-}
-
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 22px;
-  justify-content: center;
-}
-
-.footer-nav a {
-  color: var(--text-soft);
-  text-decoration: none;
-}
-
-.footer-nav a:hover,
-.footer-nav a:focus-visible {
-  color: var(--text-strong);
 }
 
 .footer-socials {
@@ -482,7 +465,6 @@
     justify-items: start;
   }
 
-  .footer-nav,
   .footer-socials {
     justify-content: flex-start;
   }

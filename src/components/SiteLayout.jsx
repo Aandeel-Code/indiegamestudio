@@ -38,14 +38,6 @@ export default function SiteLayout() {
           </NavLink>
         </div>
 
-        <nav className="footer-nav" aria-label="Quick navigation">
-          <a href="#top">Back to top</a>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/releases">Releases</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </nav>
-
         <div className="footer-socials" aria-label="Social links">
           <a
             className="social-link"
