@@ -59,11 +59,10 @@ export default function HomePage() {
         </div>
 
         <div className="hero-copy">
-          <p className="eyebrow">Independent worlds, built with intent</p>
+          <p className="eyebrow">Short Studio Slug Maybe</p>
           <h1>Voidloop:<br/>Out Now!</h1>
           <p className="hero-text">
-            This base gives you a responsive hero, dedicated pages for the studio,
-            and a releases section that routes players into separate game pages.
+            Hero Info Section Stuffs
           </p>
 
           <div className="hero-actions">
