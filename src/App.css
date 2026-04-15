@@ -335,9 +335,13 @@
 }
 
 .hero-float-button {
+  display: block;
   padding: 0;
   border: 0;
   background: transparent;
+  appearance: none;
+  font: inherit;
+  line-height: 0;
   cursor: pointer;
 }
 
