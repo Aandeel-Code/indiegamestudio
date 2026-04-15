@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import logoImage from '../assets/image01.png'
 
 function linkClassName({ isActive }) {
@@ -8,6 +8,7 @@ function linkClassName({ isActive }) {
 
 export default function SiteLayout() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,10 @@ export default function SiteLayout() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [location.pathname])
 
   return (
     <div className="page-shell">
@@ -45,7 +50,9 @@ export default function SiteLayout() {
         </nav>
       </header>
 
-      <Outlet />
+      <div className="page-transition" key={location.pathname}>
+        <Outlet />
+      </div>
 
       <footer className="site-footer">
         <div className="footer-brand">
