@@ -177,7 +177,7 @@ export default function VoidloopPage() {
           </div>
 
           <div className="info-grid">
-            <article className="info-card">
+            <article className="info-card presskit-card">
               <h3>Download Press kit</h3>
               <p>
                 Access the live press kit for logos, screenshots, videos and the trailer.
@@ -193,7 +193,7 @@ export default function VoidloopPage() {
                 </a>
               </div>
             </article>
-            <article className="info-card">
+            <article className="info-card presskit-card">
               <h3>Steam key requests</h3>
               <p>
                 Request coverage access for Voidloop.

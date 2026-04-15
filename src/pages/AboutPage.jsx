@@ -1,9 +1,9 @@
 export default function AboutPage() {
   return (
-    <main className="page-section">
-      <section className="section-heading section-heading-wide">
+    <main className="page-section page-fullscreen">
+      <section className="section-heading section-heading-wide about-heading">
         <p className="eyebrow">About</p>
-        <h1>Indie Game Studio is a small game developer built around making original games with a fresh perspective.</h1>
+        <h1>Indie Game Studio</h1>
         <p>
           Created by Jasper Levin during his self-employment year at the
           University of Portsmouth, the studio released its debut game, Voidloop,
