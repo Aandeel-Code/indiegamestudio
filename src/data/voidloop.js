@@ -54,6 +54,7 @@ export const voidloop = {
   links: {
     steam: 'https://store.steampowered.com/app/3803180/Voidloop/',
     pressKit: 'https://drive.google.com/drive/folders/1bpScdtBRKcSQULzFvpSdec0MIaM3vaFo',
-    reqKey: 'mailto:request-key@indiegamestud.io'
+    reqKey: 'mailto:request-key@indiegamestud.io',
+    discord: 'https://discord.gg/gHrC4XSpuy',
   },
 }
