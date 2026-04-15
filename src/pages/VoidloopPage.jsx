@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { voidloop } from '../data/voidloop'
 
 export default function VoidloopPage() {
@@ -218,7 +219,8 @@ export default function VoidloopPage() {
         </section>
       </main>
 
-      {activeScreenshot ? (
+      {activeScreenshot
+        ? createPortal(
         <div
           aria-modal="true"
           className="lightbox"
@@ -265,8 +267,10 @@ export default function VoidloopPage() {
           >
             ›
           </button>
-        </div>
-      ) : null}
+        </div>,
+            document.body,
+          )
+        : null}
     </>
   )
 }
