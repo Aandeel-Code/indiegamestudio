@@ -53,6 +53,7 @@ export const voidloop = {
     'Voidloop began development in late 2024, originally titled Magical Mining, during Jasper Levin’s self-employed placement year at university under the studio name IndieGameStudio. The game has been built with help from a small group of friends and collaborators, including former Minecraft map makers and university peers.',
   links: {
     steam: 'https://store.steampowered.com/app/3803180/Voidloop/',
-    pressKit: 'https://voidloop-press-kit.indiegamestud.io',
+    pressKit: 'https://drive.google.com/drive/folders/1bpScdtBRKcSQULzFvpSdec0MIaM3vaFo',
+    reqKey: 'mailto:request-key@indiegamestud.io'
   },
 }

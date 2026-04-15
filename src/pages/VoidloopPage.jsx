@@ -132,19 +132,14 @@ export default function VoidloopPage() {
         <section className="presskit-section">
           <div className="section-heading section-heading-wide">
             <p className="eyebrow">Press Kit</p>
-            <h2>Download materials, request keys, and review the official factsheet.</h2>
-            <p>
-              The current press kit includes factsheet information, media, logos,
-              credits, and studio background for coverage and partnerships.
-            </p>
+            <h2>Download materials, & request keys</h2>
           </div>
 
           <div className="info-grid">
             <article className="info-card">
-              <h3>Official press kit</h3>
+              <h3>Download Press kit</h3>
               <p>
-                Access the live press kit for the latest media, logos, screenshots,
-                and production details.
+                Access the live press kit for logos, screenshots, videos and the trailer.
               </p>
               <div className="hero-actions">
                 <a
@@ -160,17 +155,16 @@ export default function VoidloopPage() {
             <article className="info-card">
               <h3>Steam key requests</h3>
               <p>
-                Request coverage access for Voidloop through the current Steam key
-                request link included inside the official press kit.
+                Request coverage access for Voidloop.
               </p>
               <div className="hero-actions">
                 <a
                   className="button button-secondary"
-                  href={voidloop.links.pressKit}
+                  href={voidloop.links.reqKey}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Open press kit
+                  Request Key
                 </a>
               </div>
             </article>
