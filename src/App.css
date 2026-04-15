@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  isolation: isolate;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,19 +15,42 @@
   padding: 0.625rem clamp(1rem, 3vw, 2rem);
   box-sizing: border-box;
   border-bottom: 1px solid var(--border);
-  background:
-    linear-gradient(180deg, rgba(8, 14, 18, 0.10), rgba(8, 14, 18, 0.10)),
-    rgba(8, 14, 18, 0.25);
   backdrop-filter: blur(12px);
-  transition:
-    background-color 500ms ease,
-    opacity 500ms ease;
 }
 
-.topbar.is-scrolled {
+.topbar::before,
+.topbar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 700ms ease;
+}
+
+.topbar::before {
+  opacity: 1;
+  background:
+    linear-gradient(180deg, rgba(8, 14, 18, 0.1), rgba(8, 14, 18, 0.1)),
+    rgba(8, 14, 18, 0.25);
+}
+
+.topbar::after {
+  opacity: 0;
   background:
     linear-gradient(180deg, rgba(8, 14, 18, 0.66), rgba(8, 14, 18, 0.66)),
     rgba(8, 14, 18, 0.66);
+}
+
+.topbar.is-scrolled {
+}
+
+.topbar.is-scrolled::before {
+  opacity: 0;
+}
+
+.topbar.is-scrolled::after {
+  opacity: 1;
 }
 
 :root {

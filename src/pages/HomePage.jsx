@@ -66,9 +66,14 @@ export default function HomePage() {
           </p>
 
           <div className="hero-actions">
-            <Link className="button button-primary" to="https://store.steampowered.com/app/3803180/Voidloop/">
+            <a
+              className="button button-primary"
+              href="https://store.steampowered.com/app/3803180/Voidloop/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Play Voidloop
-            </Link>
+            </a>
             <Link className="button button-secondary" to="/about">
               Press Kit
             </Link>
