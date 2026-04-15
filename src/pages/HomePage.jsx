@@ -26,7 +26,7 @@ export default function HomePage() {
         return
       }
 
-      const offset = (rect.top - viewportHeight * 0.5) * -0.18
+      const offset = (rect.top - viewportHeight * 0.5) * -0.28
       backgroundElement.style.setProperty('--hero-parallax-y', `${offset}px`)
     }
 
@@ -66,7 +66,7 @@ export default function HomePage() {
           </p>
 
           <div className="hero-actions">
-            <Link className="button button-primary" to="/releases">
+            <Link className="button button-primary" to="https://store.steampowered.com/app/3803180/Voidloop/">
               Play Voidloop
             </Link>
             <Link className="button button-secondary" to="/about">

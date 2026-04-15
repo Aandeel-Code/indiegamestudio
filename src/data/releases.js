@@ -3,7 +3,7 @@ import releaseCoverTwo from '../assets/ar57i4.png'
 import releaseCoverThree from '../assets/ar57i5.png'
 import heroBackdrop from '../assets/ar57i3.png'
 import releaseCoverFour from '../assets/image01.png'
-import heroLogo from '../assets/image01.png'
+import heroLogo from '../assets/e23781d7_original.png'
 
 export const releases = [
   {

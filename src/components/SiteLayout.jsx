@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import logoImage from '../assets/image01.png'
 
@@ -6,9 +7,24 @@ function linkClassName({ isActive }) {
 }
 
 export default function SiteLayout() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 4)
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className="page-shell">
-      <header className="topbar">
+      <header className={isScrolled ? 'topbar is-scrolled' : 'topbar'}>
         <NavLink className="brand" to="/">
           <img src={logoImage} alt="Indie Game Studio" />
         </NavLink>
