@@ -606,6 +606,24 @@
   opacity: 1;
 }
 
+.mobile-discord {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: fit-content;
+  min-width: 12rem;
+  margin-top: -1rem;
+  border-color: rgba(88, 101, 242, 0.55);
+  background: rgba(88, 101, 242, 0.14);
+}
+
+.mobile-discord svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
 
 .game-hero img {
   position: absolute;
@@ -694,14 +712,18 @@
   top: 1.25rem;
   right: 1.25rem;
   z-index: 31;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 3rem;
   height: 3rem;
+  padding: 0 0 0.3125rem;
   border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   color: var(--text-strong);
   font-size: 1.75rem;
-  line-height: 1;
+  line-height: 0.9;
   cursor: pointer;
 }
 
@@ -709,14 +731,18 @@
   position: absolute;
   top: 50%;
   z-index: 31;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 3.5rem;
   height: 3.5rem;
+  padding: 0 0 0.4375rem;
   border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   color: var(--text-strong);
   font-size: 2rem;
-  line-height: 1;
+  line-height: 0.9;
   cursor: pointer;
   transform: translateY(-50%);
 }
@@ -871,14 +897,11 @@
   }
 
   .hero-discord {
-    width: 2.875rem;
-    height: 2.875rem;
-    padding: 0 0.875rem;
+    display: none;
   }
 
-  .hero-discord:hover,
-  .hero-discord:focus-visible {
-    width: 7.75rem;
+  .mobile-discord {
+    display: inline-flex;
   }
 
   .game-hero-overlay {
