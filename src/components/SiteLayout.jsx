@@ -33,8 +33,8 @@ export default function SiteLayout() {
           <NavLink className={linkClassName} to="/">
             Home
           </NavLink>
-          <NavLink className={linkClassName} to="/releases">
-            Releases
+          <NavLink className={linkClassName} to="/voidloop">
+            Voidloop
           </NavLink>
           <NavLink className={linkClassName} to="/about">
             About

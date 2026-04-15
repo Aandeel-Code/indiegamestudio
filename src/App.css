@@ -324,6 +324,50 @@
   isolation: isolate;
 }
 
+.static-card {
+  cursor: default;
+}
+
+.screenshot-card {
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+}
+
+.mini-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem;
+  margin-top: -1rem;
+}
+
+.mini-gallery-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  cursor: pointer;
+  appearance: none;
+}
+
+.mini-gallery-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.mini-gallery-card:hover img,
+.mini-gallery-card:focus-visible img {
+  transform: scale(1.04);
+}
+
 .release-card::after {
   content: '';
   position: absolute;
@@ -348,6 +392,12 @@
 .release-card:focus-visible img {
   transform: scale(1.06);
   filter: saturate(1.08);
+}
+
+.static-card:hover img,
+.static-card:focus-visible img {
+  transform: scale(1.01);
+  filter: none;
 }
 
 .release-overlay {
@@ -379,6 +429,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
   gap: 1.375rem;
+}
+
+.facts-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.facts-grid .info-card h3 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .info-card,
@@ -436,6 +495,129 @@
 
 .detail-caption {
   padding: 1rem 1.125rem 1.125rem;
+}
+
+.game-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.game-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 34rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1.75rem;
+  background: var(--surface);
+}
+
+.game-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 18, 24, 0.88) 0%,
+      rgba(7, 18, 24, 0.76) 36%,
+      rgba(7, 18, 24, 0.28) 62%,
+      rgba(7, 18, 24, 0.1) 100%
+    ),
+    linear-gradient(180deg, rgba(7, 18, 24, 0.16) 0%, rgba(7, 18, 24, 0.86) 100%);
+}
+
+.game-hero-overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 42rem;
+  padding: 2rem;
+}
+
+.game-hero-overlay p:last-of-type {
+  color: var(--text-soft);
+}
+
+.presskit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(6, 10, 12, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-panel {
+  position: relative;
+  max-width: min(90vw, 72rem);
+  max-height: 86vh;
+}
+
+.lightbox-panel img {
+  display: block;
+  max-width: 100%;
+  max-height: 86vh;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 31;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--text-strong);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 31;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--text-strong);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.lightbox-nav-prev {
+  left: 1.25rem;
+}
+
+.lightbox-nav-next {
+  right: 1.25rem;
 }
 
 .site-footer {
@@ -526,6 +708,18 @@
     order: -1;
   }
 
+  .game-hero {
+    min-height: 28rem;
+  }
+
+  .game-hero-overlay {
+    padding: 1.5rem;
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .site-footer {
     grid-template-columns: 1fr;
     justify-items: start;
@@ -556,6 +750,40 @@
 
   .hero-art {
     min-height: 20rem;
+  }
+
+  .game-hero {
+    min-height: 22rem;
+  }
+
+  .game-hero-overlay {
+    padding: 1.25rem;
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox-close {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .lightbox-nav {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .lightbox-nav-prev {
+    left: 0.75rem;
+  }
+
+  .lightbox-nav-next {
+    right: 0.75rem;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-background img {

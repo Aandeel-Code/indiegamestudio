@@ -12,7 +12,7 @@ export default function ReleaseDetailPage() {
           <div className="detail-copy">
             <p className="eyebrow">Not Found</p>
             <h1>That release page does not exist.</h1>
-            <p>Check the releases index or add a new entry to `src/data/releases.js`.</p>
+            <p>Check the Voidloop release pages or update the release data for a new entry.</p>
             <Link className="button button-primary" to="/releases">
               Back to releases
             </Link>
@@ -35,7 +35,7 @@ export default function ReleaseDetailPage() {
 
           <div className="hero-actions">
             <Link className="button button-primary" to="/contact">
-              Enquire about the game
+              Contact the studio
             </Link>
             <Link className="button button-secondary" to="/releases">
               Back to releases

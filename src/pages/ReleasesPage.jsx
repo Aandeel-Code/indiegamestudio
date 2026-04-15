@@ -5,11 +5,11 @@ export default function ReleasesPage() {
   return (
     <main className="page-section">
       <section className="section-heading section-heading-wide">
-        <p className="eyebrow">Releases Archive</p>
-        <h1>Current and upcoming projects from the studio.</h1>
+        <p className="eyebrow">Voidloop</p>
+        <h1>Featured systems and supporting pages from the studio’s debut release.</h1>
         <p>
-          This page acts as the root for the releases folder, with each title
-          linking into its own detail page under `/releases/:slug`.
+          Voidloop released on April 13, 2026, with supporting pages for the
+          game’s core features, progression, and cave exploration.
         </p>
       </section>
 

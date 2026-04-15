@@ -3,25 +3,25 @@ export default function ContactPage() {
     <main className="page-section">
       <section className="section-heading section-heading-wide">
         <p className="eyebrow">Contact</p>
-        <h1>Make it easy for players, press, and partners to reach the studio.</h1>
+        <h1>Get in touch with Indie Game Studio.</h1>
         <p>
-          This page is set up as a base contact page. Replace the placeholder
-          details below with your real inboxes, socials, and business channels.
+          Follow the studio online, get in contact directly by email, or use the
+          social links in the footer for the latest updates on Voidloop.
         </p>
       </section>
 
       <section className="info-grid">
         <article className="info-card">
-          <h2>General</h2>
-          <p>hello@indiegamestudio.dev</p>
+          <h2>Email</h2>
+          <p>jasper@indiegamestud.io</p>
         </article>
         <article className="info-card">
-          <h2>Press</h2>
-          <p>press@indiegamestudio.dev</p>
+          <h2>Studio socials</h2>
+          <p>X, Bluesky, Instagram, and LinkedIn are all linked in the footer.</p>
         </article>
         <article className="info-card">
-          <h2>Business</h2>
-          <p>partnerships@indiegamestudio.dev</p>
+          <h2>Current focus</h2>
+          <p>Voidloop is out now, released on April 13, 2026.</p>
         </article>
       </section>
     </main>

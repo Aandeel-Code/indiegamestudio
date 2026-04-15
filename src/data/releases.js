@@ -7,48 +7,52 @@ import heroLogo from '../assets/e23781d7_original.png'
 
 export const releases = [
   {
-    slug: 'starline-echo',
-    title: 'Starline Echo',
-    tag: 'Action RPG',
-    description: 'A neon frontier expedition across shifting asteroid cities.',
-    image: releaseCoverOne,
-    accent: 'Frontier Systems',
-    year: '2026',
-    body:
-      'Chart unstable trade routes, recruit a modular crew, and fight for control of a living constellation that rewrites itself between jumps.',
-  },
-  {
-    slug: 'cinder-circuit',
-    title: 'Cinder Circuit',
-    tag: 'Arcade Racer',
-    description: 'Tight corners, rust-red skies, and high-speed elimination runs.',
+    slug: 'voidloop',
+    title: 'Voidloop',
+    tag: 'PC / Mobile',
+    description:
+      'A mining roguelite adventure focused on cursed cave exploration, loot gathering, and reaching the bottom to find home.',
     image: releaseCoverTwo,
-    accent: 'Burnout League',
+    accent: 'Out Now',
     year: '2026',
     body:
-      'Built around heavy drift handling and aggressive rival AI, Cinder Circuit pushes every event toward a last-lap collapse.',
+      'Voidloop is Indie Game Studio’s debut release, launched on April 13, 2026. Players venture deep into cursed caves, gather loot, upgrade their tools, and push further downward in search of home.',
   },
   {
-    slug: 'hollow-signal',
-    title: 'Hollow Signal',
-    tag: 'Narrative Horror',
-    description: 'Investigate a broadcast tower where every transmission fights back.',
+    slug: 'cave-types',
+    title: 'Cave Types',
+    tag: 'Feature',
+    description:
+      'Explore different cave environments as the run deepens and the risk climbs.',
+    image: releaseCoverTwo,
+    accent: 'Voidloop Feature',
+    year: '2026',
+    body:
+      'Different cave types shape the pacing of each descent and give the world a stronger sense of progression as players move toward the bottom.',
+  },
+  {
+    slug: 'mining-and-combat',
+    title: 'Mining and Combat',
+    tag: 'Feature',
+    description:
+      'Mine resources, manage danger, and keep moving when the caves push back.',
     image: releaseCoverThree,
-    accent: 'Signal Archive',
-    year: '2025',
+    accent: 'Voidloop Feature',
+    year: '2026',
     body:
-      'Follow unstable radio logs, decode spatial anomalies, and decide which voices deserve to be heard before the tower rewrites your route out.',
+      'Resource gathering sits at the core of Voidloop, but the caves are hostile. Progress depends on balancing mining, movement, upgrades, and surviving threats deeper underground.',
   },
   {
-    slug: 'bloom-static',
-    title: 'Bloom Static',
-    tag: 'Puzzle Adventure',
-    description: 'Restore a drowned biome through light, timing, and old machinery.',
+    slug: 'abilities-and-progression',
+    title: 'Abilities and Progression',
+    tag: 'Feature',
+    description:
+      'Upgrade tools, unlock abilities, and build the kit needed to go deeper.',
     image: releaseCoverFour,
-    accent: 'Biotech Restoration',
-    year: '2025',
+    accent: 'Voidloop Feature',
+    year: '2026',
     body:
-      'Reconnect flooded systems, coax dormant ecosystems back online, and uncover the failed experiment that buried the valley under glasswater.',
+      'Upgrades and abilities help players survive longer runs and reach deeper layers of the caves, turning each attempt into meaningful progress.',
   },
 ]
 
