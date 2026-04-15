@@ -110,6 +110,26 @@ button:focus-visible {
   transform: translate3d(0, 0, 0);
 }
 
+#root::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(124, 255, 117, 0.42), transparent 36%),
+    radial-gradient(circle at 20% 22%, rgba(60, 255, 80, 0.3), transparent 28%),
+    radial-gradient(circle at 82% 30%, rgba(80, 255, 116, 0.28), transparent 30%),
+    linear-gradient(180deg, rgba(36, 255, 80, 0.36), rgba(8, 255, 80, 0.28));
+  mix-blend-mode: screen;
+  transition: opacity 220ms ease;
+}
+
+body.green-overlay-active #root::after {
+  opacity: 1;
+}
+
 h1,
 h2,
 h3 {

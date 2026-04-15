@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { heroRelease } from '../data/releases'
 
 export default function HomePage() {
   const heroRef = useRef(null)
   const heroBackgroundRef = useRef(null)
+  const [greenOverlayEnabled, setGreenOverlayEnabled] = useState(false)
 
   useEffect(() => {
     const heroElement = heroRef.current
@@ -51,6 +52,14 @@ export default function HomePage() {
     }
   }, [])
 
+  useEffect(() => {
+    document.body.classList.toggle('green-overlay-active', greenOverlayEnabled)
+
+    return () => {
+      document.body.classList.remove('green-overlay-active')
+    }
+  }, [greenOverlayEnabled])
+
   return (
     <main>
       <section className="hero-section" id="hero" ref={heroRef}>
@@ -69,7 +78,7 @@ export default function HomePage() {
 
           <div className="hero-actions">
             <a
-              className="button button-primary"
+              className="button button-primary hero-cta-glow"
               href="https://store.steampowered.com/app/3803180/Voidloop/"
               target="_blank"
               rel="noreferrer"
@@ -83,12 +92,17 @@ export default function HomePage() {
         </div>
 
         <div className="hero-art">
-          <div className="hero-float">
+          <button
+            aria-label="Toggle hidden site overlay"
+            className="hero-float hero-float-button"
+            onClick={() => setGreenOverlayEnabled((enabled) => !enabled)}
+            type="button"
+          >
             <img
               src={heroRelease.floatingImage}
               alt="Featured game artwork floating over the hero background"
             />
-          </div>
+          </button>
         </div>
       </section>
     </main>

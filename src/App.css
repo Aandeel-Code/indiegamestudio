@@ -215,6 +215,43 @@
   background: var(--accent);
 }
 
+.hero-cta-glow {
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 0 0 rgba(183, 140, 255, 0);
+  overflow: hidden;
+  animation: heroCtaPulse 3.6s ease-in-out infinite;
+}
+
+.hero-cta-glow::before,
+.hero-cta-glow::after {
+  content: '';
+  position: absolute;
+  inset: -0.2rem;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.hero-cta-glow::before {
+  z-index: -1;
+  background:
+    radial-gradient(circle, rgba(183, 140, 255, 0.4), rgba(183, 140, 255, 0.12) 52%, rgba(183, 140, 255, 0) 72%);
+  filter: blur(0.72rem);
+  animation: heroCtaHalo 3.6s ease-in-out infinite;
+}
+
+.hero-cta-glow::after {
+  inset: -10% auto -10% -35%;
+  width: 26%;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 0 18%, rgba(255, 255, 255, 0.08) 18% 36%, rgba(255, 255, 255, 0.26) 36% 58%, rgba(255, 255, 255, 0.08) 58% 76%, rgba(255, 255, 255, 0) 76% 100%);
+  opacity: 0.38;
+  transform: skewX(-10deg);
+  mix-blend-mode: screen;
+  image-rendering: pixelated;
+  animation: heroCtaShimmer 6.8s ease-in-out infinite;
+}
+
 .button-secondary {
   color: var(--text-strong);
   background: transparent;
@@ -297,6 +334,13 @@
   animation: heroFloat 6s ease-in-out infinite;
 }
 
+.hero-float-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .hero-float img {
   display: block;
   width: 100%;
@@ -311,6 +355,57 @@
 
   50% {
     transform: translateY(-14px);
+  }
+}
+
+@keyframes heroCtaPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 rgba(183, 140, 255, 0),
+      0 0 0.28rem rgba(183, 140, 255, 0.18),
+      0 0 0.85rem rgba(183, 140, 255, 0.06);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0.95rem rgba(183, 140, 255, 0.42),
+      0 0 1.8rem rgba(183, 140, 255, 0.2),
+      0 0 2.8rem rgba(183, 140, 255, 0.08);
+  }
+}
+
+@keyframes heroCtaHalo {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: scale(0.975);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+}
+
+@keyframes heroCtaShimmer {
+  0% {
+    opacity: 0;
+    left: -26%;
+  }
+
+  14% {
+    opacity: 0.55;
+  }
+
+  34% {
+    opacity: 0;
+    left: 102%;
+  }
+
+  100% {
+    opacity: 0;
+    left: 102%;
   }
 }
 
